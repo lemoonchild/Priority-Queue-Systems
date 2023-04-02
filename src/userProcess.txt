@@ -1,0 +1,4 @@
+vi,rei02,0
+ls,aroldo30,-20
+operaGX,rosa20,5
+cat,albertina01,8
