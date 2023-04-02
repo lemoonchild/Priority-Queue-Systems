@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ReadFile {
 
@@ -19,16 +18,16 @@ public class ReadFile {
 
             while (line != null) {
 
-                String[] userProcess = line.split(",");
-                arrayUserProcess.addAll(Arrays.asList(userProcess));
+                arrayUserProcess.add(line);
                 line = reader.readLine();
+
             }
 
             reader.close();
             file.close();
 
         } catch (IOException e) {
-            System.out.println("Error al leer el archivo " + userPath);
+            System.out.println("An error occurred reading the file: " + userPath);
             e.printStackTrace();
         }
 

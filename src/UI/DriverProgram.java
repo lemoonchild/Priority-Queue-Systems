@@ -17,8 +17,8 @@ public class DriverProgram {
         System.out.println("Welcome to Priority Queue Systems");
         System.out.println("We're reading your file, wait a minute...");
 
-        String filePath = "userprocess.txt";
-        readFile.readUserTxt(filePath);
+        String filePath = "src/userprocess.txt";
+       readFile.readUserTxt(filePath);
 
         System.out.println("Please, select the type of VectorHeap to use: ");
         System.out.println("1. VectorHeap");
