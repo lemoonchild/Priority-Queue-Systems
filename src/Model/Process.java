@@ -2,10 +2,10 @@ package Model;
 
 public class Process {
 
-    private String nameProcess;
-    private String userName;
-    private String niceValue;
-    private String priority;
+    String nameProcess;
+    String userName;
+    String niceValue;
+    String priority;
 
     public Process(String nP, String uN, String nV){
         this.nameProcess = nP;
@@ -14,7 +14,6 @@ public class Process {
         this.priority = niceValue + 120;
 
     }
-
 
     public String getNameProcess() {
         return nameProcess;
@@ -44,14 +43,12 @@ public class Process {
         return priority;
     }
 
-    public void setPriority(String priority) {
-        this.priority = priority;
+    public void setPriority(String prioriy) {
+        this.priority = prioriy;
     }
 
     public String toString(){
         return (getNameProcess() + ", " + getUserName() + ", " + getNiceValue() + ", PR=" + getPriority());
     }
-
-
 
 }
