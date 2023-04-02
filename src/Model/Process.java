@@ -2,11 +2,45 @@ package Model;
 
 public class Process {
 
-    /* Atributos del proceso
-    - nombreProceso
-    - nombreUsuario
-    - NICE
-    - Prioridad
+    String nameProcess;
+    String userName;
+    String niceValue;
+    String priority;
 
-     */
+    public String getNameProcess() {
+        return nameProcess;
+    }
+
+    public void setNameProcess(String nameProcess) {
+        this.nameProcess = nameProcess;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getNiceValue() {
+        return niceValue;
+    }
+
+    public void setNiceValue(String niceValue) {
+        this.niceValue = niceValue;
+    }
+
+    public String getPrioriy() {
+        return priority;
+    }
+
+    public void setPrioriy(String prioriy) {
+        this.priority = prioriy;
+    }
+
+
+
+
+
 }
