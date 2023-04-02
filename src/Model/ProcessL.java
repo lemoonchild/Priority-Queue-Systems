@@ -1,17 +1,17 @@
 package Model;
 
-public class Process {
+public class ProcessL implements Comparable<ProcessL> {
 
     String nameProcess;
     String userName;
     String niceValue;
     String priority;
 
-    public Process(String nP, String uN, String nV){
+    public ProcessL(String nP, String uN, String nV){
         this.nameProcess = nP;
         this.userName = uN;
         this.niceValue = nV;
-        this.priority = niceValue + 120;
+        this.priority = String.valueOf((Integer.parseInt(niceValue) + 120));
 
     }
 
@@ -45,6 +45,11 @@ public class Process {
 
     public void setPriority(String prioriy) {
         this.priority = prioriy;
+    }
+
+    @Override
+    public int compareTo(ProcessL otherProcess){
+        return this.niceValue.compareTo(otherProcess.niceValue);
     }
 
     public String toString(){
