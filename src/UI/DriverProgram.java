@@ -3,12 +3,19 @@ package UI;
 import Controller.Process_Management;
 import Controller.ReadFile;
 import Model.ProcessL;
-
 import java.util.Scanner;
 import java.util.Vector;
 
+/**
+ * The type Driver program.
+ */
 public class DriverProgram {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -18,13 +25,20 @@ public class DriverProgram {
 
     }
 
+    /**
+     * User menu.
+     *
+     * @param sc                the sc
+     * @param rf                the rf
+     * @param processManagement the process management
+     */
     public static void userMenu(Scanner sc, ReadFile rf, Process_Management processManagement) {
+
+        System.out.println("Welcome to Priority Queue Systems\n\nWe're reading your file, wait a minute...\n");
+        System.out.println("Please, select the type of VectorHeap to use: \n\t1. VectorHeap\n\t2. VectorHeap from JCF\n\t3.Finish program");
 
         Vector processList = new Vector<ProcessL>();
         int selection = sc.nextInt();
-
-        System.out.println("Welcome to Priority Queue Systems\nWe're reading your file, wait a minute...");
-        System.out.println("Please, select the type of VectorHeap to use: \n\t1. VectorHeap\n2. VectorHeap from JCF\n3.Finish program");
 
         switch(selection){
             case 1:

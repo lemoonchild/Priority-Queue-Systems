@@ -8,8 +8,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
 
+/**
+ * The type Process management.
+ */
 public class Process_Management {
 
+    /**
+     * Pq using vh.
+     *
+     * @param line        the line
+     * @param processList the process list
+     * @param sc          the sc
+     */
     public void pqUsingVH(ArrayList<String> line, Vector<ProcessL> processList, Scanner sc){
 
         processList = new Vector<>();
@@ -24,7 +34,7 @@ public class Process_Management {
         VectorHeap processQueue = new VectorHeap(processList);
 
         while(printQueue){
-            System.out.println(processQueue.remove());
+            System.out.println("\n" + processQueue.remove());
             System.out.println("Show next process? (Y/N)");
             String continueText = sc.next();
             printQueue = continueText.equalsIgnoreCase("y") && !processQueue.isEmpty();
@@ -32,6 +42,13 @@ public class Process_Management {
 
     }
 
+    /**
+     * Pq using vhjcf.
+     *
+     * @param line        the line
+     * @param processList the process list
+     * @param sc          the sc
+     */
     public void pqUsingVHJCF(ArrayList<String> line, Vector<ProcessL> processList, Scanner sc){
 
         processList = new Vector<>();
@@ -46,8 +63,8 @@ public class Process_Management {
 
         while(printQueue){
             System.out.println(processQueue.remove());
-            System.out.println("Show next process? (Y/N)");
-            String continueText = sc.nextLine();
+            System.out.println("\n" + "Show next process? (Y/N)");
+            String continueText = sc.next();
             printQueue = continueText.equalsIgnoreCase("y") && !processQueue.isEmpty();
         }
 

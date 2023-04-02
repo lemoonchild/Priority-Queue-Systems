@@ -2,16 +2,32 @@ package Model;
 
 import java.util.Vector;
 
+/**
+ * The type Vector heap.
+ *
+ * @param <E> the type parameter
+ */
 public class VectorHeap <E extends Comparable<E>> implements IPriorityQueue<E>{
 
+    /**
+     * The Data.
+     */
     protected Vector<E> data;
 
+    /**
+     * Instantiates a new Vector heap.
+     */
     public VectorHeap(){
 
         data = new Vector<>();
 
     }
 
+    /**
+     * Instantiates a new Vector heap.
+     *
+     * @param vectorHeap the vector heap
+     */
     public VectorHeap(Vector<E> vectorHeap){
 
         data = new Vector<>(vectorHeap.size());
@@ -23,7 +39,8 @@ public class VectorHeap <E extends Comparable<E>> implements IPriorityQueue<E>{
 
     /**
      * Retorna el padre de un nodo en la localidad i
-     * @param i
+     *
+     * @param i the
      * @return padre del nodo
      */
     protected static int parent(int i)
@@ -34,7 +51,8 @@ public class VectorHeap <E extends Comparable<E>> implements IPriorityQueue<E>{
 
     /**
      * Retorna el índice del hijo izquierdo de un nodo en la posición i
-     * @param i
+     *
+     * @param i the
      * @return el índice del hijo izquierdo
      */
     protected static int left(int i)
@@ -46,7 +64,8 @@ public class VectorHeap <E extends Comparable<E>> implements IPriorityQueue<E>{
 
     /**
      * Retorna el índice del hijo derecho de un nodo en la posición i
-     * @param i
+     *
+     * @param i the
      * @return el índice del hijo derecho
      */
     protected static int right(int i)
@@ -57,7 +76,8 @@ public class VectorHeap <E extends Comparable<E>> implements IPriorityQueue<E>{
 
     /**
      * Mueve el nodo en el índice de la hoja hasta la posición apropiada
-     * @param leaf
+     *
+     * @param leaf the leaf
      */
     protected void percolateUp(int leaf)
 
@@ -85,7 +105,8 @@ public class VectorHeap <E extends Comparable<E>> implements IPriorityQueue<E>{
 
     /**
      * Mueve el nodo al índice de la raíz de abajo hacia la posición apropiada en el subárbol
-     * @param root
+     *
+     * @param root the root
      */
     protected void pushDownRoot(int root)
 

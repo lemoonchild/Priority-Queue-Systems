@@ -3,16 +3,32 @@ package Model;
 import java.util.PriorityQueue;
 import java.util.Vector;
 
+/**
+ * The type Vector heap jcf.
+ *
+ * @param <E> the type parameter
+ */
 public class VectorHeapJCF<E extends Comparable<E>> extends PriorityQueue<E> {
 
+    /**
+     * The Data.
+     */
     protected Vector<E> data;
 
+    /**
+     * Instantiates a new Vector heap jcf.
+     */
     public VectorHeapJCF(){
 
         data = new Vector<>();
 
     }
 
+    /**
+     * Instantiates a new Vector heap jcf.
+     *
+     * @param vectorHeap the vector heap
+     */
     public VectorHeapJCF(Vector<E> vectorHeap){
 
         data = new Vector<>(vectorHeap.size());
@@ -24,7 +40,8 @@ public class VectorHeapJCF<E extends Comparable<E>> extends PriorityQueue<E> {
 
     /**
      * Retorna en la representación padre de un nodo en la localidad i
-     * @param i
+     *
+     * @param i the
      * @return padre del nodo
      */
     protected static int parent(int i)
@@ -34,7 +51,8 @@ public class VectorHeapJCF<E extends Comparable<E>> extends PriorityQueue<E> {
 
     /**
      * Retorna el índice de la representación hijo izquierdo de un nodo en la posición i
-     * @param i
+     *
+     * @param i the
      * @return el índice del hijo izquierdo
      */
     protected static int left(int i)
@@ -44,8 +62,9 @@ public class VectorHeapJCF<E extends Comparable<E>> extends PriorityQueue<E> {
     }
 
     /**
-     *  Se encarga de retornar el índice del hijo derecho de un nodo en la posición i
-     * @param i
+     * Se encarga de retornar el índice del hijo derecho de un nodo en la posición i
+     *
+     * @param i the
      * @return el índice del hijo derecho
      */
     protected static int right(int i)
@@ -56,7 +75,8 @@ public class VectorHeapJCF<E extends Comparable<E>> extends PriorityQueue<E> {
 
     /**
      * Se encarga de mover el nodo en el índice de la hoja hasta la posición apropiada
-     * @param leaf
+     *
+     * @param leaf the leaf
      */
     protected void percolateUp(int leaf)
 
@@ -86,8 +106,9 @@ public class VectorHeapJCF<E extends Comparable<E>> extends PriorityQueue<E> {
 
 
     /**
-     *  Se encarga de mover el nodo al índice de la raíz de abajo hacia la posición apropiada en el subárbol
-     * @param root
+     * Se encarga de mover el nodo al índice de la raíz de abajo hacia la posición apropiada en el subárbol
+     *
+     * @param root the root
      */
     protected void pushDownRoot(int root)
 
@@ -134,6 +155,7 @@ public class VectorHeapJCF<E extends Comparable<E>> extends PriorityQueue<E> {
 
     /**
      * Cumple con la función de capturar el primer valor del vector
+     *
      * @return primer valor
      */
     public E getFirst() {

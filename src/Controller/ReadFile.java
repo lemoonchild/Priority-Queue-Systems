@@ -5,8 +5,17 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * The type Read file.
+ */
 public class ReadFile {
 
+    /**
+     * Read user txt array list.
+     *
+     * @param userPath the user path
+     * @return the array list
+     */
     public ArrayList<String> readUserTxt(String userPath){
 
         ArrayList<String> arrayUserProcess = new ArrayList<String>();
